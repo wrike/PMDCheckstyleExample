@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<ruleset name="Components rule set"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>
+        Markup rule set
+    </description>
+
+    <exclude-pattern>.*/com/wrike/codestyle/.*</exclude-pattern>
+
+    <rule name="ScreenshotTestMustHaveScreenshotTestTag"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.ScreenshotTestMustHaveScreenshotTag"
+          message="Screenshot test should have 'SCREENSHOT_TEST' tag">
+        <description>
+            Screenshot test should have 'SCREENSHOT_TEST' tag
+        </description>
+        <priority>1</priority>
+    </rule>
+
+    <rule name="TestShouldHaveOnlyOneEpic"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.TestShouldHaveOnlyOneEpic"
+          message="Test must have only one @Epic annotation (not @Epics)">
+        <description>
+            Test must have only one @Epic annotation (not @Epics)
+        </description>
+        <priority>1</priority>
+    </rule>
+
+    <rule name="TestShouldHaveNoMoreThanOneFeature"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.TestShouldHaveNoMoreThanOneFeature"
+          message="Test must have no more than one @Feature annotation (not @Features)">
+        <description>
+            Test must have no more than one @Feature annotation (not @Features)
+        </description>
+        <priority>1</priority>
+    </rule>
+
+    <rule name="TestShouldHaveNoMoreThanOneStory"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.TestShouldHaveNoMoreThanOneStory"
+          message="Test must have no more than one @Story annotation (not @Stories)">
+        <description>
+            Test must have no more than one @Story annotation (not @Stories)
+        </description>
+        <priority>1</priority>
+    </rule>
+
+</ruleset>

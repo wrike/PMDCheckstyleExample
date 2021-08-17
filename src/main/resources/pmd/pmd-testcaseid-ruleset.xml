@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<ruleset name="TestCaseId rule set"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>
+        Rules for check tests ids
+    </description>
+
+    <exclude-pattern>.*/com/wrike/codestyle/.*</exclude-pattern>
+
+    <rule name="TestMustHaveTestIdAnnotationRule"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.TestMustHaveTestIdAnnotationRule"
+          message="You have to use @TestCaseId with @Test annotation.">
+        <description>
+            You have to use @TestCaseId with @Test annotation.
+        </description>
+        <priority>1</priority>
+    </rule>
+
+    <rule name="CheckDuplicateTestIdRule"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.CheckDuplicateTestIdRule"
+          message="There is a duplicate @TestCaseId {0}">
+        <description>
+            There is a duplicate @TestCaseId.
+        </description>
+        <priority>1</priority>
+    </rule>
+
+    <rule name="ParametrizedTestIdsCountRule"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.ParametrizedTestIdsCountRule"
+          message="Unexpected test case ids count for parametrized test. Expected {0} ids, but found {1} ids.">
+        <description>
+            Check that parameterized tests have the right count of test case ids.
+        </description>
+        <priority>1</priority>
+    </rule>
+
+</ruleset>

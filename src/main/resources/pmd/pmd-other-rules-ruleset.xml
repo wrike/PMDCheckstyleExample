@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<ruleset name="TestCaseId rule set"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>
+        Other rules
+    </description>
+
+    <exclude-pattern>.*/com/wrike/codestyle/.*</exclude-pattern>
+
+    <rule name="ShouldNotImportRepeatedTest"
+          language="java"
+          class="com.wrike.checkstyle.wrikerules.ShouldNotImportRepeatedTest"
+          message="You should not use @RepeatedTest annotation, it is for local testing purposes only">
+        <description>
+            You should not use @RepeatedTest annotation, it is for local testing purposes only
+        </description>
+        <priority>1</priority>
+    </rule>
+
+</ruleset>
